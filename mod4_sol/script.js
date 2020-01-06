@@ -44,7 +44,7 @@ var names = ["Yaakov", "John", "Jen", "Jason", "Paul", "Frank", "Larry", "Paula"
 // 'speak' method.
 // See Lecture 50, part 1
 for (name in names/* fill in parts of the 'for' loop to loop over names array */) {
-  console.log(name)
+  console.log(names[name])
   // STEP 11:
   // Retrieve the first letter of the current name in the loop.
   // Use the string object's 'charAt' function. Since we are looking for
@@ -52,7 +52,7 @@ for (name in names/* fill in parts of the 'for' loop to loop over names array */
   // string object's 'toLowerCase' method on the result so we can compare
   // to lower case character 'j' afterwards.
   // Look up these methods on Mozilla Developer Network web site if needed.
-  var firstLetter = name[0].toLowerCase
+  var firstLetter = names[name][0].toLowerCase
 
   // STEP 12:
   // Compare the 'firstLetter' retrieved in STEP 11 to lower case
@@ -60,9 +60,9 @@ for (name in names/* fill in parts of the 'for' loop to loop over names array */
   // in the loop. Otherwise, call helloSpeaker's 'speak' method with the current
   // name in the loop.
   if (firstLetter === 'j') {
-    byeSpeaker.speak(name)
+    byeSpeaker.speak(names[name])
   } else {
-    helloSpeaker.speak(name)
+    helloSpeaker.speak(names[name])
   }
 }
 })();
